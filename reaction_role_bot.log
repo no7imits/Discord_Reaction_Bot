@@ -1,0 +1,4 @@
+2025-01-26 12:43:28 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-01-26 12:43:28 - INFO - logging in using static token
+2025-01-26 12:43:28 - INFO - Shard ID None has connected to Gateway (Session ID: 78bec21a7ef96235c1eb2aee8cad2889).
+2025-01-26 12:43:30 - INFO - Bot logged in as Reaction Bot#2850
