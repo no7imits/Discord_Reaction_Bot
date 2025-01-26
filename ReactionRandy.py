@@ -62,10 +62,8 @@ async def on_raw_reaction_add(payload):
             await member.add_roles(role)
             logging.info(f"Assigned role {role.name} to {member.name} (ID: {member.id})")
 
-        # Log the reaction in the channel
-        channel = guild.get_channel(ROLE_CHANNEL_ID)
-        if channel:
-            await channel.send(f"{member.name} reacted with {payload.emoji.name}.")
+        # Log the reaction without sending a message to the channel
+        logging.info(f"{member.name} reacted with {payload.emoji.name}.")
 
 # Event: Remove role on reaction remove
 @bot.event
@@ -78,10 +76,8 @@ async def on_raw_reaction_remove(payload):
             await member.remove_roles(role)
             logging.info(f"Removed role {role.name} from {member.name} (ID: {member.id})")
 
-        # Log the reaction removal in the channel
-        channel = guild.get_channel(ROLE_CHANNEL_ID)
-        if channel:
-            await channel.send(f"{member.name} removed reaction {payload.emoji.name}.")
+        # Log the reaction removal without sending a message to the channel
+        logging.info(f"{member.name} removed reaction {payload.emoji.name}.")
 
 # Run the bot
 bot.run(TOKEN)
